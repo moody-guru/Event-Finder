@@ -1,0 +1,13 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Compiled CSS (optional, but good practice if it's generated)
+src/output.css
+
+# npm debug logs
+npm-debug.log*
+.npm/
+.node_repl_history
