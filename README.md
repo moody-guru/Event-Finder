@@ -1,9 +1,8 @@
 Event Finder with AI Recommendations
-✨ Project Overview
-This project transforms a basic event search into an intelligent "Event Finder" application that leverages modern web technologies and AI to help users discover nearby events and get personalized recommendations. It fetches event data based on your current location and preferences, and then uses a Large Language Model (LLM) to suggest the best event for you.
 
-💡 Idea & Purpose
-The core idea is to provide a seamless and personalized event discovery experience. Instead of just listing events, the application aims to understand user preferences and offer a tailored recommendation, making the process of finding the perfect outing easier and more engaging. This project demonstrates a full-stack approach, integrating frontend UI with a secure backend API proxy and AI capabilities.
+✨ Project Overview
+This project transforms a basic event search into an intelligent "Event Finder" application that leverages modern web technologies and AI to help users discover nearby events and get personalized recommendations. 
+It fetches event data based on your current location and preferences, and then uses a Large Language Model (LLM) to suggest the best event for you, integrating frontend UI with a secure backend API proxy and AI capabilities.
 
 🚀 Key Features
 Current Location-Based Search: Automatically detects your geographical location using the browser's Geolocation API to find events relevant to your vicinity.
@@ -15,8 +14,6 @@ AI-Powered Recommendations (Gemini API): After fetching events, users can input 
 Dynamic UI with Images: Displays event details along with a relevant image for each event (if available from Ticketmaster), enhancing visual appeal. Includes fallback placeholders for missing or error-prone images.
 
 Smooth UI Animations (Intersection Observer API): Utilizes the Intersection Observer API to create subtle fade-in and slide-up animations for event listings as they scroll into view, improving the user experience.
-
-Dark Theme Support: The frontend is styled with a dark theme, adapting to user system preferences for a comfortable viewing experience in low-light environments.
 
 Secure API Handling (Backend Proxy): All API calls to external services (Ticketmaster, Gemini) are routed through a Node.js Express backend server. This keeps sensitive API keys secure on the server-side and prevents their exposure in the frontend.
 
@@ -31,6 +28,7 @@ dotenv: Module to load environment variables from a .env file for secure API key
 cors: Middleware to enable Cross-Origin Resource Sharing, allowing frontend and backend communication.
 
 node-fetch: A light-weight module that brings window.fetch to Node.js, used for making HTTP requests to external APIs.
+
 
 Frontend
 HTML5: Structure of the web page.
@@ -102,9 +100,6 @@ This will start the Express server, which will serve your frontend files and han
 Backend server running on http://localhost:3000
 Frontend accessible at http://localhost:3000/index.html
 
-b. (Optional) Run Tailwind CSS Build Watcher
-If you plan to make changes to input.css or use custom Tailwind features beyond the CDN, you might have a build:css script. If so, open a second terminal in the project root and run:
-
 # Check your package.json scripts for the exact command, e.g.:
 
 npm run build:css
@@ -135,16 +130,9 @@ Enter your Event Preferences (e.g., "something relaxing," "a lively concert," "f
 
 Click the "Get AI Recommendation ✨" button to receive a personalized suggestion from the Gemini AI.
 
-🔮 Future Enhancements
-User Location Input: Allow users to manually enter a city or address instead of relying solely on geolocation.
+<img width="1917" height="1022" alt="image" src="https://github.com/user-attachments/assets/1ef912e2-c185-476a-92e8-5758b574d50e" />
+<img width="1919" height="1028" alt="image" src="https://github.com/user-attachments/assets/fdb48099-7f6f-4862-a557-a0b7178228ef" />
 
-Event Filtering/Sorting: Add options to filter events by date, category, or sort them by relevance, date, etc.
-
-Dark Mode Toggle: Implement a button or switch to allow users to manually toggle between light and dark themes, overriding system preferences.
-
-More Detailed Event View: Create a dedicated page or modal for each event with more comprehensive details (e.g., full description, ticket information, map).
-
-User Authentication: For more personalized features (e.g., saving favorite events), implement user authentication.
 
 📄 License
 This project is open-source and available under the MIT License.
