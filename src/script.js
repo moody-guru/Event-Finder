@@ -106,7 +106,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       // --- IMPORTANT: FOR LOCAL DEVELOPMENT, USE LOCALHOST URL ---
-      const BACKEND_URL = "http://localhost:3000"; // Changed to localhost
+     // const BACKEND_URL = "http://localhost:3000"; // Changed to localhost
+
+      const BACKEND_URL = 'https://event-finder-backend-vqg3.onrender.com'; // Updated to your deployed Render URL
       // --- END IMPORTANT ---
 
       // Construct the URL for your backend API endpoint
