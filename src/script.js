@@ -105,9 +105,13 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
+      // --- IMPORTANT: FOR LOCAL DEVELOPMENT, USE LOCALHOST URL ---
+      const BACKEND_URL = "http://localhost:3000"; // Changed to localhost
+      // --- END IMPORTANT ---
+
       // Construct the URL for your backend API endpoint
       let backendUrl =
-        `http://localhost:3000/api/places/search?` +
+        `${BACKEND_URL}/api/places/search?` + // Updated URL
         `lat=${lat}&lon=${lon}&radius=${radius}`;
 
       if (keyword) {
@@ -144,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const li = document.createElement("li");
             // Initial state for animation: hidden and slightly moved down
             li.className =
-              "text-gray-800 flex items-start space-x-4 p-4 bg-white rounded-lg shadow-md transition-all duration-700 ease-out opacity-0 translate-y-4";
+              "event-item text-gray-800 flex items-start space-x-4 p-4 bg-white rounded-lg shadow-md transition-all duration-700 ease-out opacity-0 translate-y-4"; // Added event-item class
 
             // Event Image
             const eventImageContainer = document.createElement("div");
@@ -187,7 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             eventDetails.innerHTML = `
                             <h3 class="text-xl font-semibold mb-1">${eventName}</h3>
-                            <p class="text-sm text-gray-600 mb-2">On ${eventDate} at ${venueName}</p>
+                            <p class="text-sm text-gray-600">On ${eventDate} at ${venueName}</p>
                             <a href="${eventUrl}" target="_blank" class="text-blue-600 hover:underline text-sm">View Details</a>
                         `;
 
@@ -233,17 +237,19 @@ document.addEventListener("DOMContentLoaded", () => {
       geminiRecommendationDiv.innerHTML =
         '<p class="text-center text-gray-600">Getting AI recommendation... <span class="animate-pulse">...</span></p>';
 
+      // --- IMPORTANT: FOR LOCAL DEVELOPMENT, USE LOCALHOST URL ---
+      const BACKEND_URL = "http://localhost:3000"; // Changed to localhost
+      // --- END IMPORTANT ---
+
       try {
-        const response = await fetch(
-          "http://localhost:3000/api/gemini/recommend",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ preferences, events: fetchedEvents }),
-          }
-        );
+        const response = await fetch(`${BACKEND_URL}/api/gemini/recommend`, {
+          // Updated URL
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ preferences, events: fetchedEvents }),
+        });
 
         if (!response.ok) {
           const errorDetails = await response.text();
