@@ -1,10 +1,10 @@
 Event Finder with AI Recommendations
 
-✨ Project Overview
+   ✨ Project Overview
 This project transforms a basic event search into an intelligent "Event Finder" application that leverages modern web technologies and AI to help users discover nearby events and get personalized recommendations. 
 It fetches event data based on your current location and preferences, and then uses a Large Language Model (LLM) to suggest the best event for you, integrating frontend UI with a secure backend API proxy and AI capabilities.
 
-🚀 Key Features
+   🚀 Key Features
 Current Location-Based Search: Automatically detects your geographical location using the browser's Geolocation API to find events relevant to your vicinity.
 
 Event Discovery (Ticketmaster API): Fetches a list of events from the Ticketmaster Discovery API, allowing users to search by keyword (e.g., "music," "sports," "comedy") and within a specified radius.
@@ -17,7 +17,8 @@ Smooth UI Animations (Intersection Observer API): Utilizes the Intersection Obse
 
 Secure API Handling (Backend Proxy): All API calls to external services (Ticketmaster, Gemini) are routed through a Node.js Express backend server. This keeps sensitive API keys secure on the server-side and prevents their exposure in the frontend.
 
-🛠️ Technologies Used
+
+   🛠️ Technologies Used
 Backend
 Node.js: JavaScript runtime environment.
 
